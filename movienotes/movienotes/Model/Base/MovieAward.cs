@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace movienotes.Model.Base
 {
-    public class Song
+    public class MovieAward
     {
-        public int SongID { get; set; }
+        public int MovieID { get; set; }
 
-        public ICollection<Performer> Performers;
-
-        public string Title { get; set; }
+        public int AwardID { get; set; }
     }
 }

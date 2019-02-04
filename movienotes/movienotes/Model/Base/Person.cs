@@ -25,5 +25,7 @@ namespace movienotes.Model.Base
         public ICollection<CrewMember> CrewMemberships { get; set; }
 
         public ICollection<CastMember> CastMemberships { get; set; }
+
+        public ICollection<ArtistMember> ArtistMemberships { get; set; }
     }
 }

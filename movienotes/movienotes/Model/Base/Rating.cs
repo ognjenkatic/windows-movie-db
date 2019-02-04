@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace movienotes.Model.Base
 {
-    public class Genre
+    public class Rating
     {
+        public int RatingID { get; set; }
+
+        public string Symbol { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }
 
-        public int GenreID { get; set; }
-
-        public ICollection<MovieGenre> MovieGenres { get; set; }
+        public ICollection<Movie> Movies { get; set; }
     }
 }

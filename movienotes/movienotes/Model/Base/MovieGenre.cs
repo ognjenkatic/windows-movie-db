@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace movienotes.Model.Base
 {
-    public class Genre
+    public class MovieGenre
     {
-        public string Name { get; set; }
-
-        public string Description { get; set; }
+        public int MovieID { get; set; }
 
         public int GenreID { get; set; }
-
-        public ICollection<MovieGenre> MovieGenres { get; set; }
     }
 }

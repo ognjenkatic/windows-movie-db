@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace movienotes.Model.Base
 {
-    public class Performer
+    public class MovieSong
     {
-        public int PerformerID { get; set; }
+        public int ArtistID { get; set; }
 
-        public int PersonID { get; set; }
+        public int MovieID { get; set; }
 
-        public string Name { get; set; }
+        public string Title { get; set; }
     }
 }
