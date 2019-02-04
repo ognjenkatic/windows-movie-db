@@ -68,15 +68,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Base\Artist.cs" />
+    <Compile Include="Model\Base\ArtistMember.cs" />
+    <Compile Include="Model\Base\Award.cs" />
     <Compile Include="Model\Base\CastMember.cs" />
     <Compile Include="Model\Base\CrewMember.cs" />
     <Compile Include="Model\Base\CrewPosition.cs" />
     <Compile Include="Model\Base\Genre.cs" />
     <Compile Include="Model\Base\Movie.cs" />
-    <Compile Include="Model\Base\Performer.cs" />
+    <Compile Include="Model\Base\MovieAward.cs" />
+    <Compile Include="Model\Base\MovieGenre.cs" />
+    <Compile Include="Model\Base\Rating.cs" />
     <Compile Include="Model\Base\Person.cs" />
     <Compile Include="Model\Base\Quote.cs" />
-    <Compile Include="Model\Base\Song.cs" />
+    <Compile Include="Model\Base\MovieSong.cs" />
+    <Compile Include="Model\Base\SongPerformer.cs" />
     <Compile Include="Model\Base\TrailerLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
