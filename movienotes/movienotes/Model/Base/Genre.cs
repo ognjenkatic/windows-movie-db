@@ -15,5 +15,10 @@ namespace movienotes.Model.Base
         public int GenreID { get; set; }
 
         public ICollection<MovieGenre> MovieGenres { get; set; }
+
+        public Genre()
+        {
+            this.MovieGenres = new List<MovieGenre>();
+        }
     }
 }

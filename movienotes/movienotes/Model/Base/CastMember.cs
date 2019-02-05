@@ -18,5 +18,9 @@ namespace movienotes.Model.Base
 
         public string Note { get; set; }
 
+        public Movie Movie { get; set; }
+
+        public Person Person { get; set; }
+
     }
 }

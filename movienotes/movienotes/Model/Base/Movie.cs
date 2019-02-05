@@ -12,6 +12,8 @@ namespace movienotes.Model.Base
 
         public int RatingID { get; set; }
 
+        public Rating Rating { get; set; }
+
         public string Title { get; set; }
 
         public string Tagline { get; set; }
@@ -35,5 +37,16 @@ namespace movienotes.Model.Base
         public ICollection<MovieGenre> MovieGenres { get; set; }
 
         public ICollection<MovieAward> MovieAwards { get; set; }
+
+        public Movie()
+        {
+            this.MovieSongs = new List<MovieSong>();
+            this.Quotes = new List<Quote>();
+            this.CastMembers = new List<CastMember>();
+            this.CrewMembers = new List<CrewMember>();
+            this.TrailerLinks = new List<TrailerLink>();
+            this.MovieGenres = new List<MovieGenre>();
+            this.MovieAwards = new List<MovieAward>();
+        }
     }
 }

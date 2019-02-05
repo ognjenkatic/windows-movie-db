@@ -27,5 +27,12 @@ namespace movienotes.Model.Base
         public ICollection<CastMember> CastMemberships { get; set; }
 
         public ICollection<ArtistMember> ArtistMemberships { get; set; }
+
+        public Person()
+        {
+            this.CrewMemberships = new List<CrewMember>();
+            this.CastMemberships = new List<CastMember>();
+            this.ArtistMemberships = new List<ArtistMember>();
+        }
     }
 }

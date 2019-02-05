@@ -10,6 +10,10 @@ namespace movienotes.Model.Base
     {
         public int TrailerLinkID { get; set; }
 
+        public int MovieID { get; set; }
+
+        public Movie Movie { get; set; }
+
         public string Name { get; set; }
 
         public string Link { get; set; }

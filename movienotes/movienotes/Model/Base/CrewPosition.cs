@@ -15,5 +15,10 @@ namespace movienotes.Model.Base
         public string Description { get; set; }
 
         public ICollection<CrewMember> CrewMemberships { get; set; }
+
+        public CrewPosition()
+        {
+            this.CrewMemberships = new List<CrewMember>();
+        }
     }
 }

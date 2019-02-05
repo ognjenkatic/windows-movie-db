@@ -14,6 +14,9 @@ namespace movienotes.Model.Base
 
         public int CrewPositionID { get; set; }
 
+        public Movie Movie { get; set; }
+
+        public Person Person { get; set; }
 
     }
 }

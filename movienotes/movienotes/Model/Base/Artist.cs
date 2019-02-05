@@ -17,5 +17,11 @@ namespace movienotes.Model.Base
         public ICollection<MovieSong> MovieSongs { get; set; }
 
         public ICollection<ArtistMember> ArtistMemberships { get; set; }
+
+        public Artist()
+        {
+            this.MovieSongs = new List<MovieSong>();
+            this.ArtistMemberships = new List<ArtistMember>();
+        }
     }
 }

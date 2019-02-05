@@ -11,5 +11,9 @@ namespace movienotes.Model.Base
         public int MovieID { get; set; }
 
         public int AwardID { get; set; }
+
+        public Movie Movie { get; set; }
+
+        public Award Award { get; set; }
     }
 }

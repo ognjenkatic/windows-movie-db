@@ -1,7 +1,4 @@
-﻿using movienotes.Data;
-using movienotes.Model.Base;
-using movienotes.View;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace movienotes
+namespace movienotes.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for FrontPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class FrontPage : Page
     {
-        public MainWindow()
+        public FrontPage()
         {
             InitializeComponent();
-
-            FrontPage pgee = new FrontPage();
-
-            navigationFrame.NavigationService.Navigate(pgee);
         }
     }
 }

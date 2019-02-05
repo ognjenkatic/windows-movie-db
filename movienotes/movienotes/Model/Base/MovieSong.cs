@@ -13,5 +13,9 @@ namespace movienotes.Model.Base
         public int MovieID { get; set; }
 
         public string Title { get; set; }
+
+        public Movie Movie { get; set; }
+
+        public Artist Artist { get; set; }
     }
 }

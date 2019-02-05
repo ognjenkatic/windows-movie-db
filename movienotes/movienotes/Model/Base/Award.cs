@@ -14,6 +14,11 @@ namespace movienotes.Model.Base
 
         public string AwardDescription { get; set; }
 
-        public ICollection<MovieAward> MovieAwards { get; set; }
+        public ICollection<MovieAward> AwardMovies { get; set; }
+
+        public Award()
+        {
+            this.AwardMovies = new List<MovieAward>();
+        }
     }
 }
