@@ -14,10 +14,10 @@ namespace movienotes.ViewModel
 
         public MainMenuViewModel() : base()
         {
-            NavigateCommand = new ViewModelCommand(NavigatetPage, CanNavigatePage);
+            NavigateCommand = new ViewModelCommand(NavigatePage, CanNavigatePage);
         }
         
-        public void NavigatetPage(object parameter = null)
+        public void NavigatePage(object parameter = null)
         {
             Messenger.Instance.SendNavigateMessage(new NavigateMessageArgs
             {
