@@ -159,6 +159,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utility\Messenger.cs" />
+    <Compile Include="ViewModel\Base\BaseCrudViewModel.cs" />
+    <Compile Include="ViewModel\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModel\Base\ViewModelCommand.cs" />
+    <Compile Include="ViewModel\MainMenuViewModel.cs" />
+    <Compile Include="ViewModel\MovieGridViewModel.cs" />
+    <Compile Include="ViewModel\MovieRowViewModel.cs" />
     <Compile Include="View\FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
     </Compile>

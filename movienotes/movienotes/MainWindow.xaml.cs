@@ -1,5 +1,6 @@
 ﻿using movienotes.Data;
 using movienotes.Model.Base;
+using movienotes.Utility;
 using movienotes.View;
 using System;
 using System.Collections.Generic;
@@ -27,9 +28,31 @@ namespace movienotes
         {
             InitializeComponent();
 
-            FrontPage pgee = new FrontPage();
+            Messenger.Instance.NavigateEvent += ReceiveNavigateMessage;
+        }
 
-            navigationFrame.NavigationService.Navigate(pgee);
+        private void ReceiveNavigateMessage(object sender, NavigateMessageArgs args)
+        {
+            try
+            {
+                Page page = null;
+                switch (args.PageName)
+                {
+                    case ("FrontPage"):
+                        {
+                            page = new FrontPage();
+                            break;
+                        }
+                }
+                if (page != null)
+                {
+                    navigationFrame.NavigationService.Navigate(page);
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine("Exception while loading page " + args.PageName + " " + exc.Message);
+            }
         }
     }
 }

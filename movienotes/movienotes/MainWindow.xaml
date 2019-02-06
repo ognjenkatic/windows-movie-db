@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:movienotes"
+        xmlns:viewModels="clr-namespace:movienotes.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <viewModels:MainMenuViewModel/>
+    </Window.DataContext>
     <Grid>
-        <Frame Name="navigationFrame"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" MinWidth="100"/>
+            <ColumnDefinition Width="0.8*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button Content="List Movies" Command="{Binding NavigateFrontPageCommand}"/>
+        </StackPanel>
+        <Frame Grid.Column="1" Name="navigationFrame"/>
     </Grid>
 </Window>

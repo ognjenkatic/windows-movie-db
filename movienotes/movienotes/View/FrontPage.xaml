@@ -4,11 +4,26 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:movienotes.View"
+      xmlns:viewModels="clr-namespace:movienotes.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FrontPage">
 
+    <Page.DataContext>
+        <viewModels:MovieGridViewModel/>
+    </Page.DataContext>
     <Grid>
-        <Label Content="Page1"/> 
+        <DataGrid ItemsSource="{Binding Movies}"
+                  HeadersVisibility="Column"
+                  AutoGenerateColumns="False"
+                  SelectedItem="{Binding SelectedMovie, Mode=OneWay}"
+                  SelectionMode="Single"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding TheMovie.Title }"/>
+                <DataGridTextColumn Header="Released" Binding="{Binding TheMovie.YearOfRelease}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

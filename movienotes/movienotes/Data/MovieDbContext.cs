@@ -10,6 +10,19 @@ namespace movienotes.Data
 {
     public class MovieDbContext : DbContext
     {
+        private static MovieDbContext _instance = null;
+
+        public static MovieDbContext Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new MovieDbContext();
+
+                return _instance;
+            }
+        }
+        
         public DbSet<Award> Award { get; set; }
         public DbSet<ArtistMember> ArtistMember { get; set; }
         public DbSet<Artist> Artist { get; set; }
@@ -24,6 +37,11 @@ namespace movienotes.Data
         public DbSet<Movie> Movie { get; set; }
         public DbSet<CastMember> CastMember { get; set; }
         public DbSet<Rating> Rating { get; set; }
+
+        private MovieDbContext()
+        {
+
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBUilder)
         {
