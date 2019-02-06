@@ -10,19 +10,23 @@ namespace movienotes.ViewModel
 {
     public class MainMenuViewModel : BaseViewModel
     {
-        public ViewModelCommand NavigateFrontPageCommand { get; set; }
+        public ViewModelCommand NavigateCommand { get; set; }
 
         public MainMenuViewModel() : base()
         {
-            NavigateFrontPageCommand = new ViewModelCommand(NavigateFrontPage, CanNavigateFrontPage);
+            NavigateCommand = new ViewModelCommand(NavigatetPage, CanNavigatePage);
         }
-
-        public void NavigateFrontPage(object parameter = null)
+        
+        public void NavigatetPage(object parameter = null)
         {
-            Messenger.Instance.SendNavigateMessage("FrontPage");
+            Messenger.Instance.SendNavigateMessage(new NavigateMessageArgs
+            {
+                PageName = parameter.ToString(),
+                ViewModel = null
+            });
         }
 
-        public bool CanNavigateFrontPage(object parameter = null)
+        public bool CanNavigatePage(object parameter = null)
         {
             return true;
         }

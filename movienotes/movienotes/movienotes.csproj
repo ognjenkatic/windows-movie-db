@@ -166,8 +166,12 @@
     <Compile Include="ViewModel\MainMenuViewModel.cs" />
     <Compile Include="ViewModel\MovieGridViewModel.cs" />
     <Compile Include="ViewModel\MovieRowViewModel.cs" />
+    <Compile Include="ViewModel\EditMovieViewModel.cs" />
     <Compile Include="View\FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditMovie.xaml.cs">
+      <DependentUpon>EditMovie.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +188,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\FrontPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditMovie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

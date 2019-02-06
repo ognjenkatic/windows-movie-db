@@ -12,12 +12,14 @@
     </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.2*" MinWidth="100"/>
+            <ColumnDefinition Width="0.2*" MinWidth="100" MaxWidth="100"/>
             <ColumnDefinition Width="0.8*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <Button Content="List Movies" Command="{Binding NavigateFrontPageCommand}"/>
+            <Button Content="List Movies" Command="{Binding NavigateCommand}" CommandParameter="FrontPage"/>
+            <Separator/>
+            <Button Content="New Movie" Command="{Binding NavigateCommand}" CommandParameter="NewMovie"/>
         </StackPanel>
-        <Frame Grid.Column="1" Name="navigationFrame"/>
+        <Frame Grid.Column="1" Name="navigationFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -1,0 +1,57 @@
+﻿<Page x:Class="movienotes.View.NewMovie"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:movienotes.View"
+      xmlns:viewModels="clr-namespace:movienotes.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NewMovie">
+
+    <Page.DataContext>
+        <viewModels:EditMovieViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+    </Page.Resources>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" MaxWidth="200"/>
+            <ColumnDefinition Width="0.8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0"/>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" MinWidth="100" MaxWidth="120"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Content="Title"/>
+            <Label Grid.Row="1" Content="Tagline"/>
+            <Label Grid.Row="2" Content="Year"/>
+            <Label Grid.Row="3" Content="Duration (minutes)"/>
+            <Label Grid.Row="4" Content="Sinopsis"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Path=Movie.TheMovie.Title, Mode=TwoWay}"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=Movie.TheMovie.Tagline, Mode=TwoWay}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=Movie.TheMovie.YearOfRelease, Mode=TwoWay}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Path=Movie.TheMovie.DurationMinutes, Mode=TwoWay}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Height="100" Text="{Binding Path=Movie.TheMovie.Sinopsis, Mode=TwoWay}"/>
+            <Button Grid.Row="5" Grid.Column="1" Width="70" Content="Save" Command="{Binding SaveMovieCommand}"/>
+        </Grid>
+    </Grid>
+</Page>

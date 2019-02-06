@@ -1,4 +1,5 @@
-﻿using System;
+﻿using movienotes.ViewModel.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,13 +30,9 @@ namespace movienotes.Utility
 
         public event EventHandler<NavigateMessageArgs> NavigateEvent;
 
-        public void SendNavigateMessage(string pageName)
+        public void SendNavigateMessage(NavigateMessageArgs args)
         {
-            NavigateEvent?.Invoke(this, new NavigateMessageArgs
-            {
-                PageName = pageName
-            });
-;
+            NavigateEvent?.Invoke(this, args);
         }
 
     }
@@ -43,5 +40,6 @@ namespace movienotes.Utility
     public class NavigateMessageArgs
     {
         public string PageName { get; set; }
+        public BaseViewModel ViewModel { get; set; }
     }
 }

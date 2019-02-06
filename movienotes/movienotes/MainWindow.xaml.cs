@@ -43,9 +43,16 @@ namespace movienotes
                             page = new FrontPage();
                             break;
                         }
+                    case ("NewMovie"):
+                        {
+                            page = new NewMovie();
+                            break;
+                        }
                 }
                 if (page != null)
                 {
+                    if (args.ViewModel != null)
+                        page.DataContext = args.ViewModel;
                     navigationFrame.NavigationService.Navigate(page);
                 }
             }
