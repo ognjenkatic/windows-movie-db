@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="movienotes.UserControl.PersonEdit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:movienotes.UserControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*" MaxWidth="100" MinWidth="100"/>
+            <ColumnDefinition Width="0.8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Full Name"/>
+        <Label Grid.Row="1" Content="Date of birth"/>
+        <Label Grid.Row="2" Content="Country of birth"/>
+        <Label Grid.Row="3" Content="City of birth"/>
+        <Label Grid.Row="4" Content="Nationality"/>
+        <Label Grid.Row="5" Content="Biography"/>
+        <TextBox Grid.Column="1" Grid.Row="0"/>
+        <TextBox Grid.Column="1" Grid.Row="1"/>
+        <TextBox Grid.Column="1" Grid.Row="2"/>
+        <TextBox Grid.Column="1" Grid.Row="3"/>
+        <TextBox Grid.Column="1" Grid.Row="4"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Height="100"/>
+    </Grid>
+</UserControl>
